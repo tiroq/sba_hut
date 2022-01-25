@@ -1,0 +1,135 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import PosterCardCard components.cards.poster_card.PosterCardCard
+#:import FakeCard components.cards.fake_card.FakeCard
+#:import PostCard components.cards.post_card.PostCard
+#:import BadgeButton components.badge_button.BadgeButton
+#:import Tab components.tab.Tab
+
+
+<MyLabel@MDLabel>
+    theme_text_color: "Custom"
+    text_color: get_color_from_hex("#4f5152")
+    font_name: "assets/font/SourceSansPro-Regular.otf"
+
+
+<FacebookDesktop>
+    md_bg_color: get_color_from_hex("#e3f2fc")
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        TopBar:
+            id: tab_box
+
+        MDBoxLayout:
+
+            LeftBar:
+
+            ScrollView:
+
+                MDBoxLayout:
+                    adaptive_height: True
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        padding: "24dp", "24dp", 0, "24dp"
+                        adaptive_height: True
+
+                        MyLabel:
+                            text: "      STORIES"
+                            adaptive_height: True
+                            font_style: "H5"
+
+                        ScrollView:
+                            size_hint_y: None
+                            height: "356dp"
+                            bar_width: 0
+
+                            MDGridLayout:
+                                id: story_box
+                                rows: 1
+                                size_hint_x: None
+                                width: self.minimum_width
+                                padding: "24dp", "48dp", 0, 0
+
+                        MDBoxLayout:
+                            adaptive_height: True
+                            spacing: "24dp"
+
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                size_hint_x: .65
+                                padding: "24dp", "42dp", 0, 0
+                                spacing: "12dp"
+                                adaptive_height: True
+
+                                MyLabel:
+                                    text: "NEW POST"
+                                    adaptive_size: True
+                                    font_style: "H5"
+
+                                PosterCardCard:
+
+                                Widget:
+                                    size_hint_y: None
+                                    height: "12dp"
+
+                                PostCard:
+
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                size_hint_x: .35
+                                spacing: "12dp"
+
+                                MyLabel:
+                                    text: "YOUR FRIENDS"
+                                    adaptive_size: True
+                                    font_style: "H5"
+
+                                MDBoxLayout:
+                                    id: box_friends
+                                    orientation: "vertical"
+                                    adaptive_height: True
+                                    spacing: "12dp"
+                                    padding: 0, "12dp", 0, "12dp"
+
+                                MyLabel:
+                                    text: "SUGGESTED FRIENDS"
+                                    adaptive_size: True
+                                    font_style: "H5"
+
+                                MDBoxLayout:
+                                    id: box_suggested_friends
+                                    orientation: "vertical"
+                                    adaptive_height: True
+                                    spacing: "12dp"
+                                    padding: 0, "12dp", 0, "12dp"
+
+                                Widget:
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        size_hint_x: None
+                        width: "340dp"
+                        padding: "24dp", "24dp", "6dp", 0
+
+                        MDBoxLayout:
+                            padding: "24dp", 0, "24dp", "24dp"
+
+                            MyLabel:
+                                text: "Last chats"
+                                adaptive_height: True
+                                font_style: "H6"
+
+                        MDBoxLayout:
+                            id: box_chat
+                            orientation: "vertical"
+                            adaptive_height: True
+                            padding: "24dp"
+                            spacing: "24dp"
+                            md_bg_color: get_color_from_hex("#cce6f8")
+                            radius: 12
+
+                        Widget:
+                            size_hint_y: None
+                            height: "500dp"
