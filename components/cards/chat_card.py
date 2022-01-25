@@ -1,7 +1,7 @@
 from kivy.core.window import Window
 from kivy.properties import StringProperty
 
-from FacebookDesktop.components.cards.fake_card import FakeCard
+from components.cards.fake_card import FakeCard
 
 
 class ChatCard(FakeCard):

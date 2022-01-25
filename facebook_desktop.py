@@ -5,9 +5,9 @@ from kivymd.uix.screen import MDScreen
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.theming import ThemableBehavior
 
-from FacebookDesktop.components.cards.chat_card import ChatCard
-from FacebookDesktop.components.cards.friend_card import FriendCard
-from FacebookDesktop.components.cards.story_card import StoryCard
+from components.cards.chat_card import ChatCard
+from components.cards.friend_card import FriendCard
+from components.cards.story_card import StoryCard
 
 
 class FacebookDesktop(ThemableBehavior, MDScreen):
