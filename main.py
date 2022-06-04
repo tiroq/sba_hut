@@ -2,7 +2,7 @@
 
 # from kivy.config import Config
 # from kivy.lang import Builder
-
+from libs.selector import TemplateSelector
 from libs.templater import DocxTemplater
 
 # Config.set("graphics", "window_state", "maximized")
@@ -41,3 +41,5 @@ if __name__ == '__main__':
     print(doc.absolute)
     print(doc.sub_path)
     print(doc.sub_path in doc.path)
+    selector = TemplateSelector()
+    print(selector.select_template())
